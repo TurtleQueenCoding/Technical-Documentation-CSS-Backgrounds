@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Backgrounds Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Styling HTML elements with CSS backgrounds can add a creative flair to your webpages and help them stand out from the crowd. Before learning about CSS backgrounds, you should have the following:</p>
+        <ul>
+          <li>Basic computer literacy and familiarity with using the Web passively (i.e. looking at it, consuming content)</li>
+          <li>Basic software for web development installed and an understanding of how to create and manage website files</li>
+          <li>Familiarity with HTML (Hypertext Markup Language)</li>
+          <li>An understanding of what CSS is and how it works</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Background_Colors">
+        <header>Background Colors</header>
+        <p>The <code>background-color</code> property defines the background color on any element in CSS. The property accepts any valid <code>color</code>. A background-color extends underneath the content and padding box of the element. In this document, I have styled my code elements with a <code>background-color</code> set to <code>goldenrod</code>. In the link below, I used various color values to add a background color to the <code>.box</code> class, an <code>h2</code> element, and a <code>span</code> element.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/xxYqGmZ" target="_blank" class="codepen-link" style="text-decoration:none"><button type="button" id="background-color-example">Background-Color Example</button></a>
+      </section>
+      <section class="main-section" id="Background_Images">
+        <header>Background Images</header>
+        <p>The <code>background-image</code> property enables the display of an image in the background of an element. In the linked example below, there are two boxes — one has a <code>background-image</code> which is larger than the box (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg" target="_blank">balloons.jpg</a>), the other has a small image of a single star (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png" target="_blank">star.png</a>).</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/QWQpWNP" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button">Background-Image Example</button></a>
+        <p>This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box (here defined as <code>.a</code>), so we only see a small corner of it, whereas the small image is tiled to fill the box (here defined as <code>.b</code>).</p>
+        <p>Also, since I did not have these images on file, I used the full url from the Mozilla Developer Network (hereafter referred to as MDN) in my code. This can also work on an image hosting website like Imgur, as long as the link ends in an image file extension (like jpg, png, or gif).</p>
+        <p>If you specify a background color in addition to a transparent background image, the image displays on top of the color. I added <code>background-color: red</code> property to <code>.b</code>, which demonstrates this effect.</p>
+      </section>
+      <section class="main-section" id="Repeating_Backgrounds">
+        <header>Repeating Backgrounds</header>
+        <p>The <code>background-repeat</code> property is used to control the tiling behavior of images. The available values are:</p>
+        <ul>
+          <li><code>no-repeat</code> — stop the background from repeating altogether.</li>
+          <li><code>repeat-x</code> — repeat horizontally.</li>
+          <li><code>repeat-y</code> — repeat vertically.</li>
+          <li><code>repeat</code> — repeat in both directions. This is the default when you add a <code>background-image to an HTML element</code>.</li>
+        </ul>
+        <p>In this example, I set <code>background-repeat</code> to <code>repeat-x</code> to demonstrate how that makes the image repeat horizontally. If I had done <code>repeat-y</code> instead, I would have a vertical line of stars. <code>no-repeat</code> gives one star, and <code>repeat</code> (or simply doing nothing since it's the default value for <code>background-repeat</code>) would fill the box with stars.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/poaeoGy" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button">Background-Repeat Example</button></a>
+      </section>
+      <section class="main-section" id="Sizing_Backgrounds">
+        <header>Sizing Backgrounds</header>
+        <p>The balloons.jpg image used in the initial background images example is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the <code>background-size</code> property, which can take length or percentage values, to size the image to fit inside the background.</p>
+        <p>You can also use keywords:</p>
+        <ul>
+          <li><code>cover</code> — the browser will make the image just large enough so that it completely covers the box area while still retaining its aspect ratio. In this case, part of the image is likely to end up outside the box.</li>
+          <li><code>contain</code> — the browser will make the image the right size to fit inside the box. In this case, you may end up with gaps on either side or on the top and bottom of the image, if the aspect ratio of the image is different from that of the box.</li>
+        </ul>
+        <p>In the example below, I used <code id="sizing-code-two">background-size: 100 10em</code> to fit the balloons.jpg image inside the box. You can see how this has distorted the image.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/BaYWyLN" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button">Background-Size Example</button></a>
+        <p>To experiment more with <code>background-size</code>, you can copy my code and try the following:</p>
+        <ul>
+          <li>Change the length units used to modify the size of the background.</li>
+          <li>Remove the length units and see what happens when you use <code>background-size: cover</code> or <code>background-size: contain</code>.</li>
+          <li>If your image is smaller than the box, you can change the value of <code>background-repeat</code> to repeat the image.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Positioning_Backgrounds">
+        <header>Positioning Backgrounds</header>
+        <p>The <code>background-position</code> property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is <code>(0,0)</code>, and the box is positioned along the horizontal <code>(x)</code> and vertical <code>(y)</code> axes. You can also set the different axis positions individually with <code>background-position-x</code> and <code>background-position-y</code>. If you don't set the <code>background-position</code> value, it will default to <code>(0,0)</code>.</p>
+        <p>The most common background-position values take two individual values — a horizontal value followed by a vertical value.</p>
+        <p>You can use the keywords <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, and <code>center</code>, along with lengths and percentages. If you mix keyword values with lengths or percentages, the first value must refer to the horizontal position or offset and the second vertical. For example, <code>background-position: 20px top</code> is correct syntax, while <code>20px left</code> would not be.</p>
+        <p>Finally, you can also use a 4-value syntax in order to indicate a distance from certain edges of the box — the length unit, in this case, is an offset from the value that precedes it. So, <code>background-position: top 20px right 10px</code> positions the background 20px from the top and 10px from the right.</p>
+        <p>The best way to demonstrate positioning is with a smaller background inside a large space. If you copy my code, you can play around with <code>background-position</code> and move the star inside the box.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/wvyJaJP" target="_blank" style="text-decoration:none" class="codepen-link" id="button-link-five"> <button type="button"> Background-Position Example </button> </a>
+      </section>
+   <section class="main-section" id="Gradient_Backgrounds">
+            <header>Gradient Backgrounds</header>
+            <p>A gradient — when used for a background — acts just like an image and is also set by using the <code>background-image</code> property. The main background for this page is a subtle purple gradient.</p>
+            <p>The basic functions of gradients that can be applied to backgrounds are: <code>linear-gradient()</code>, <code>radial-gradient()</code>, <code>repeating-linear-gradient()</code>, <code> repeating-radial-gradient()</code>, and <code>conic-gradient()</code>. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as <a href="https://cssgradient.io/" target="_blank">this one</a>. You can create a gradient then copy and paste out the source code that generates it.</p>
+            <p>The next link shows an example of how different gradients can look, even when they are formed from the same colors. The first is a simple linear gradient stretched over the entire box, while the second is a radial gradient with a fixed size that tiles across the box four times.</p>
+            <a href="https://codepen.io/TurtleQueenCoding/details/ZEreeJX" target="_blank" style="text-decoration:none" class="codepen-link"> <button type="button" id="gradient-backgrounds-example">Gradient Backgrounds Example </button> </a>
+      </section>
+      <section class="main-section" id="Multiple_Backgrounds">
+        <header id>Multiple Backgrounds</header>
+        <p>It is also possible to have multiple background images — you specify multiple <code>background-image</code> values in a single property value, separating each one with a comma. Gradients and solid colors can be easily mixed with other background elements.</p>
+        <p>When you do this, you may end up with background images overlapping each other. The backgrounds will layer with the last listed background image at the bottom of the stack, and each previous image stacking on top of the one that follows it in the code.</p>
+        <p>The other background-* properties can also have comma-separated values in the same way as <code>background-image</code>. For example:</p>
+        <ul>
+          <li><code>background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);</code></li>
+          <li id="code-list-two"><code>background-repeat: no-repeat, repeat-x, repeat;</code></li>
+          <li><code>background-position: 10px 20px, top right;</code></li>
+        </ul>
+        <p>Each value of the different properties will match up to the values in the same position in the other properties. Above, for example, image1's background-repeat value will be no-repeat. However, what happens when different properties have different numbers of values? The answer is that the smaller numbers of values will cycle — in the above example there are four background images but only two background-position values. The first two position values will be applied to the first two images, then they will cycle back around again — image3 will be given the first position value, and image4 will be given the second position value.</p>
+        <p>In the link, I layered our familiar small yellow star <code>background-image</code> over a <code>background-image</code> of a larger blue star. If I switched the order they were listed in, the blue stars would be in front of the yellow ones.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/details/QWQpvjO" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button" id="multiple-backgrounds-example">Multiple Backgrounds Example</button></a>
+      </section>
+      <section class="main-section" id="Background_Attachment">
+        <header id>Background Attachment</header>
+        <p>Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the <code>background-attachment</code> property, which can take the following values:</p>
+        <ul>
+          <li><code>scroll</code>: causes the element's background to scroll when the page is scrolled. If the element content is scrolled, the background does not move. In effect, the background is fixed to the same position on the page, so it scrolls as the page scrolls.</li>
+          <li><code>fixed</code>: causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.</li>
+          <li><code>local</code>: fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.</li>
+        </ul>
+        <p>The background-attachment property only has an effect when there is content to scroll, and MDN made a demo to demonstrate the differences between the three values (the source code is <a href="https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds">here</a>.)</p>
+        <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button">Background-Attachment Demo</button></a>
+      </section>
+      <section class="main-section" id="Background_Shorthand">
+        <header>Background Shorthand</header>
+        <p>You will often see backgrounds specified using the background property. This shorthand lets you set all of the different properties at once.</p>
+        <p>If using multiple backgrounds, you need to specify all of the properties for the first background, then add your next background after a comma. In the linked example, we have a gradient with a size and position, then an image background with no-repeat and a position, then a color.</p>
+        <a href="https://codepen.io/TurtleQueenCoding/pen/XWZMRGr" target="_blank" style="text-decoration:none" class="codepen-link"><button type="button" id="background-shorthand-example">Background Shorthand Example</button></a>
+        <p>There are a few rules that need to be followed when writing background image shorthand values, for example:</p>
+        <ul>
+          <li>A background-color may only be specified after the final comma.</li>
+          <li>The value of background-size may only be included immediately after background-position, separated with the '/' character, like this: center/80%.</li>
+        </ul>
+          </section>
+            <section class="main-section" id="Accessibility_Considerations">
+              <header id="accessibility-header"> Accessibility Considerations</header>
+              <p id="accessibility-par-one">When placing text on top of a background image or color, you should take care that you have enough contrast for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a background-color that will allow the text to be legible if the image does not load.</p>
+              <p id="accessibility-par-two">Screen readers cannot parse background images; therefore, they should be purely decoration. Any important content should be part of the HTML page and not contained in a background.</p>
+            </section>
+            <section class="main-section" id="Reference">
+              <header id=>Reference</header>
+              <p idea="reference-par">All documentation in this page was taken from the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders" target="_blank" id="mdn-guide">MDN's guide on background and borders</a>, which is part of their "Building Blocks of CSS" series. W3Schools also has an excellent guide to CSS backgrounds, which you can access <a href="https://www.w3schools.com/css/css_background.asp" target="_blank" id="w3schools-link">here.</a></p>
+            </section>
+    </main>
+    <nav id="navbar">
+      <header>CSS Backgrounds</header>
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#Background_Colors" class="nav-link">Background Colors</a>
+      <a href="#Background_Images" class="nav-link">Background Images</a>
+      <a href="#Repeating_Backgrounds" class="nav-link">Repeating Backgrounds</a>
+      <a href="#Sizing_Backgrounds" class="nav-link">Sizing Backgrounds</a>
+      <a href="#Positioning_Backgrounds" class="nav-link">Positioning Backgrounds</a>
+      <a href="#Gradient_Backgrounds" class="nav-link">Gradient Backgrounds</a>
+      <a href="#Multiple_Backgrounds" class="nav-link">Multiple Backgrounds</a>
+      <a href="#Background_Attachment" class="nav-link">Background Attachment</a>
+      <a href="#Background_Shorthand" class="nav-link">Background Shorthand</a>
+      <a href="#Accessibility_Considerations" class="nav-link">Accessibility Considerations</a>
+      <a href="#Reference" class="nav-link">Reference</a>
+    </nav>
+  </body>
+ </html>

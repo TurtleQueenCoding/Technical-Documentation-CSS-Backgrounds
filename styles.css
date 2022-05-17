@@ -1,0 +1,133 @@
+body {
+  font-size: 18px;
+  font-family: "Merriweather Sans";
+  letter-spacing: 0.05rem;
+  word-spacing: 0.2rem;
+  line-height: 1.6em;
+  background-image: radial-gradient(circle, #f4f6fb, #e4dcfb, #c3d4f9);
+  background-size: 50%;
+}
+#navbar {
+  width: 100%;
+  max-height: 25vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  text-align: center;
+  margin-left:-.5em;
+}
+#main-doc {
+  position: relative;
+  top: 26vh;
+}
+section header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  color: #4c2780;
+  line-height: 1.8em;
+}
+#navbar header,
+.nav-link {
+  display: block;
+  line-height: 1.6em;
+}
+.nav-link {
+  background-color: #4c2780;
+  color: white;
+  padding-left: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-decoration: none;
+}
+#navbar header {
+  color: white;
+  background-color: #7e319b;
+  padding-top: 1.2em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+.nav-link:hover {
+  background-color: white;
+  color: #4c2780;
+}
+p,
+li {
+  font-family: "Merriweather Sans";
+  font-weight: 300;
+  font-size: 16px;
+}
+code {
+  background-color: goldenrod;
+}
+button {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin: 1em auto;
+  cursor: pointer;
+  background-color: #7e319b;
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  border-color: #4c2780;
+}
+button:hover {
+  background-color: #4c2780;
+}
+p a {
+  color: #4c2780;
+}
+@media only screen and (min-width:769px) {
+  #navbar {
+    width: 24%;
+    max-width: 400px;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    text-align: left;
+  }
+  #main-doc {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 26vw;
+    max-width: 68vw;
+    padding-left: 1.5em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+  }
+  section header {
+    text-align: left;
+    font-size: 30px;
+    margin-left:-1em;
+  }
+  button {
+    margin: 1em 0;
+    margin-left: 3.5em;
+    font-size: 22px;
+  }
+  #navbar header,
+  .nav-link {
+    padding-left: 1.5em;
+    font-size: 22px;
+    line-height: 1.8em;
+  }
+  p, li {
+    font-size: 18px;
+    line-height: 1.8em;
+  }
+li {
+    margin-left: 1em;
+    line-height: 1.8em;
+  }
+p {
+  margin-left: -.5em;
+  padding-right: .5em;
+}
+code {
+  font-size: 18px;
+}
