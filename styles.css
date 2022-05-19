@@ -1,5 +1,5 @@
 body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Merriweather Sans";
   letter-spacing: 0.05rem;
   word-spacing: 0.2rem;
@@ -15,7 +15,7 @@ body {
   left: 0;
   overflow: auto;
   text-align: center;
-  margin-left:-.5em;
+  margin-left: -0.5em;
 }
 #main-doc {
   position: relative;
@@ -24,7 +24,7 @@ body {
 section header {
   font-weight: bold;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   color: #4c2780;
   line-height: 1.8em;
 }
@@ -32,14 +32,17 @@ section header {
 .nav-link {
   display: block;
   line-height: 1.6em;
+  font-size: 16px;
 }
 .nav-link {
   background-color: #4c2780;
   color: white;
   padding-left: 0.5em;
+  padding-right: 0.5em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   text-decoration: none;
+  font-size: 18px;
 }
 #navbar header {
   color: white;
@@ -57,6 +60,8 @@ li {
   font-family: "Merriweather Sans";
   font-weight: 300;
   font-size: 16px;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
 }
 code {
   background-color: goldenrod;
@@ -79,9 +84,9 @@ button:hover {
 p a {
   color: #4c2780;
 }
-@media only screen and (min-width:769px) {
+@media only screen and (min-width: 769px) {
   #navbar {
-    width: 24%;
+    width: 25%;
     max-width: 400px;
     max-height: 100%;
     position: fixed;
@@ -103,7 +108,7 @@ p a {
   section header {
     text-align: left;
     font-size: 30px;
-    margin-left:-1em;
+    margin-left: -1em;
   }
   button {
     margin: 1em 0;
@@ -113,21 +118,24 @@ p a {
   #navbar header,
   .nav-link {
     padding-left: 1.5em;
+    padding-right: ""
     font-size: 22px;
     line-height: 1.8em;
   }
-  p, li {
+  p,
+  li {
     font-size: 18px;
     line-height: 1.8em;
   }
-li {
+  li {
     margin-left: 1em;
     line-height: 1.8em;
   }
-p {
-  margin-left: -.5em;
-  padding-right: .5em;
-}
-code {
-  font-size: 18px;
+  p {
+    margin-left: -0.5em;
+    padding-right: 0.5em;
+  }
+  code {
+    font-size: 18px;
+  }
 }
