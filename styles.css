@@ -37,6 +37,7 @@ section header {
   display: block;
   line-height: 1.4em;
   font-size: 16px;
+  border-bottom: 1px solid #c3d4f9;
 }
 .nav-link {
   background-color: #4c2780;
